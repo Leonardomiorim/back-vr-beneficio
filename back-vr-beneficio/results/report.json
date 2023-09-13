@@ -1,0 +1,70 @@
+[
+  {
+    "id": "validação-de-campos-typeofestablishment",
+    "uri": "features/spec/backend.feature",
+    "keyword": "Funcionalidade",
+    "name": "Validação de Campos typeOfEstablishment",
+    "description": "  Sendo usuario com acesso a API VRPAT\n  Posso listar estabelicimentos e etc...\n  Para encontrar os benificios",
+    "line": 2,
+    "elements": [
+      {
+        "id": "validação-de-campos-typeofestablishment;validar-retorno-do-campo-key-de-typeofestablishment",
+        "keyword": "Cenario",
+        "name": "Validar retorno do campo key de typeOfEstablishment",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "faço um GET na API VRPAT",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/backend_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 527844600
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "mapeio os estabelecimentos",
+            "line": 10,
+            "output": [
+              "{\"key\"=>\"REFEICAO|PIZZARIA\", \"name\"=>\"PIZZARIA\", \"label\"=>\"Refeição - Pizzaria\"}"
+            ],
+            "match": {
+              "location": "features/step_definitions/backend_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 663600
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido se o campo esta vazio",
+            "line": 11,
+            "output": [
+              "REFEICAO|PIZZARIA"
+            ],
+            "match": {
+              "location": "features/step_definitions/backend_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@KeytypeOf",
+            "line": 7
+          }
+        ]
+      }
+    ]
+  }
+]

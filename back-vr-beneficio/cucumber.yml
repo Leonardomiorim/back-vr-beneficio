@@ -1,0 +1,14 @@
+## YAML Templates
+---
+
+default: --publish-quiet -p pretty -p html -p json
+
+tentativa: --retry 1
+
+scenario: -t @VrBack
+
+pretty: --format pretty
+progress: --format progress
+
+html: --format html --out=results/report.html
+json: --format json --out=results/report.json
